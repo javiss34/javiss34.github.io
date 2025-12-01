@@ -1,3 +1,3 @@
-# Bienvenido al repositorio de mi _portafolio_. 
+# Bienvenido al repositorio de mi portafolio. 
 
-Puedes acceder a él y verlo en la web haciendo click [aquí](https://javiss34.github.io/index.html).
+Puedes explorar la versión funcional y desplegada del portafolio haciendo clic [aquí](https://javiss34.github.io/index.html).
