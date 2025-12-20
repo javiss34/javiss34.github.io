@@ -14,18 +14,22 @@ window.onload = () => {
   desordenarIndices(imagenes, contenedorImagenes);
 
   // Delegación de eventos
+
+  // Al comenzar a arrastrar un elemento con clase "arrastrable", se guarda su id en dataTransfer
   zonaArrastrable.addEventListener("dragstart", (e) => {
     if (e.target.classList.contains("arrastrable")) {
       e.dataTransfer.setData("id", e.target.id);
     }
   });
 
+  //Para evitar el comportamiento por defecto del navegador hacemos esto al arrastrar.
   zonaArrastrable.addEventListener("dragover", (e) => {
     if (e.target.classList.contains("soltable")) {
       e.preventDefault();
     }
   });
 
+  //Al soltar evitamos también el comportamiento por defecto
   zonaArrastrable.addEventListener("drop", (e) => {
     e.preventDefault();
 
@@ -64,6 +68,7 @@ window.onload = () => {
     mostrarMensaje(puzzleCorrecto);
   };
 
+  //Para reiniciar el juego
   botonReinicio.addEventListener("click", () => {
     const mensaje = document.querySelector(".mensaje");
     if (mensaje) mensaje.remove();

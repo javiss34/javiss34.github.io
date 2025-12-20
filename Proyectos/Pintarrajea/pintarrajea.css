@@ -1,4 +1,3 @@
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -6,19 +5,17 @@
     font-family: "Segoe UI", Roboto, Arial, sans-serif;
 }
 
-/* BODY */
 body {
     min-height: 100vh;
     background: linear-gradient(135deg, #1e1e2f, #2a2a40);
     display: flex;
-    flex-direction: column; /* CLAVE */
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     color: #fff;
 }
 
 
-/* CONTENEDOR PRINCIPAL */
 #pintarrajea {
     display: flex;
     gap: 20px;
@@ -31,7 +28,6 @@ body {
     height: 85vh;
 }
 
-/* TÍTULO PRINCIPAL */
 body > h2 {
     width: 100%;
     text-align: center;
@@ -45,7 +41,6 @@ body > h2 {
 
 
 
-/* PANEL IZQUIERDO */
 #contenedor_seleccionar {
     width: 220px;
     min-width: 220px;
@@ -57,14 +52,14 @@ body > h2 {
     gap: 16px;
 }
 
-/* TÍTULO */
+
 #contenedor_seleccionar h2 {
     font-size: 16px;
     text-align: center;
     color: #e0e0ff;
 }
 
-/* INPUT COLOR */
+
 #color {
     width: 100%;
     height: 44px;
@@ -73,7 +68,7 @@ body > h2 {
     cursor: pointer;
 }
 
-/* BOTONES */
+
 #contenedor_seleccionar input[type="button"] {
     padding: 12px;
     border: none;
@@ -84,7 +79,7 @@ body > h2 {
     transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s;
 }
 
-/* BORRAR */
+
 #borrar {
     background-color: #ff4d4d;
     color: white;
@@ -96,7 +91,7 @@ body > h2 {
     box-shadow: 0 8px 16px rgba(255, 77, 77, 0.4);
 }
 
-/* BORRADOR */
+
 #borrador {
     background-color: #5c5cff;
     color: white;
@@ -108,33 +103,33 @@ body > h2 {
     box-shadow: 0 8px 16px rgba(92, 92, 255, 0.4);
 }
 
-/* CONTENEDOR DE PINTADO */
+
 #contenedor_pintar {
     flex: 1;
     background-color: #ffffff;
     border-radius: 14px;
-    overflow: hidden; /* CLAVE */
+    overflow: hidden; 
 }
 
 
 
-/* TABLA */
+
 .tabla {
     width: 100%;
     height: 100%;
     border-collapse: collapse;
-    table-layout: fixed; /* MUY IMPORTANTE */
+    table-layout: fixed; 
 }
 
 
-/* PIXELES */
+
 .tabla td {
     background-color: #ffffff;
     cursor: pointer;
 }
 
 
-/* HOVER PIXEL */
+
 .tabla td:hover {
     outline: 1px solid rgba(0, 0, 0, 0.3);
 }
