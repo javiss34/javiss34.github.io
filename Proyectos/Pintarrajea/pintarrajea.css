@@ -1,0 +1,140 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* BODY */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+    display: flex;
+    flex-direction: column; /* CLAVE */
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+
+/* CONTENEDOR PRINCIPAL */
+#pintarrajea {
+    display: flex;
+    gap: 20px;
+    background-color: #1f1f2e;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    width: 95vw;
+    max-width: 1200px;
+    height: 85vh;
+}
+
+/* TÍTULO PRINCIPAL */
+body > h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #e0e0ff;
+    text-transform: uppercase;
+}
+
+
+
+/* PANEL IZQUIERDO */
+#contenedor_seleccionar {
+    width: 220px;
+    min-width: 220px;
+    background-color: #2a2a40;
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* TÍTULO */
+#contenedor_seleccionar h2 {
+    font-size: 16px;
+    text-align: center;
+    color: #e0e0ff;
+}
+
+/* INPUT COLOR */
+#color {
+    width: 100%;
+    height: 44px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* BOTONES */
+#contenedor_seleccionar input[type="button"] {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s;
+}
+
+/* BORRAR */
+#borrar {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+#borrar:hover {
+    background-color: #ff6666;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(255, 77, 77, 0.4);
+}
+
+/* BORRADOR */
+#borrador {
+    background-color: #5c5cff;
+    color: white;
+}
+
+#borrador:hover {
+    background-color: #7272ff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(92, 92, 255, 0.4);
+}
+
+/* CONTENEDOR DE PINTADO */
+#contenedor_pintar {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 14px;
+    overflow: hidden; /* CLAVE */
+}
+
+
+
+/* TABLA */
+.tabla {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* MUY IMPORTANTE */
+}
+
+
+/* PIXELES */
+.tabla td {
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+
+/* HOVER PIXEL */
+.tabla td:hover {
+    outline: 1px solid rgba(0, 0, 0, 0.3);
+}
