@@ -1,0 +1,85 @@
+body{
+    background-image: url(https://wallpapers.com/images/featured/star-wars-plzcoaffexgf4h81.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: aliceblue;
+    text-align: center;
+    background-color: rgba(189, 183, 107, 0.93);
+    max-width: 90%;       
+    margin: 20px auto;   
+    padding: 10px 20px;  
+    border-radius: 10px;  
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); 
+}
+
+
+#contenedor_enciclopedia {
+    display: flex;
+    gap: 30px; 
+    padding: 20px;
+}
+
+#listado_peliculas {
+    background-color: rgba(189, 183, 107, 0.93); 
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+#listado_peliculas p {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+#listado_peliculas p:hover {
+    background-color: goldenrod;
+    color: white;
+}
+
+.contenedor_oculto{
+    display: none;
+}
+
+.contenedor_mostrar{
+    background-color: rgba(189, 183, 107, 0.93);
+    padding: 20px;
+    flex: 1; 
+    border-radius: 10px;
+    text-align: center;
+    overflow-y: auto; 
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        /* Comienza invisible */
+        opacity: 0;
+        /* Comienza 20 píxeles por debajo de su posición final */
+        transform: translateY(20px);
+    }
+    to {
+        /* Termina completamente visible */
+        opacity: 1;
+        /* Termina en su posición normal */
+        transform: translateY(0);
+    }
+}
+
+.resumen {
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+
+
+#contenedor_informacion h2 {
+    color: black;
+    margin-bottom: 10px;
+}

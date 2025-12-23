@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <form name="formularioPrincipal">
+        <legend>Colección de discos</legend>
+        <fieldset>
+            <br><br>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+            <div id="mensajeErrorNombre"></div>
+            <br>
+            <label for="caratula">Carátula del disco:</label>
+            <input type="url" id="caratula" name="caratula">
+            <br><br>
+            <label for="grupoOInterprete">Grupo de música o intérprete:</label>
+            <input type="text" id="grupoOInterprete" name="grupoOInterprete">
+            <div id="mensajeErrorInterprete"></div>
+            <br>
+            <label for="anioPublicacion">Año de publicación:</label>
+            <input type="text" id="anioPublicacion" name="anioPublicacion">
+            <div id="mensajeErrorAnio"></div>
+            <br>
+            <label for="genero">Género:</label>
+            <br>
+            <fieldset id="cajaGenero">
+                <input type="checkbox" id="reggaetón" name="genero" value="reggaetón">
+                <label for="reggaetón">Reggaetón</label>
+                <input type="checkbox" id="pop" name="genero" value="pop">
+                <label for="pop">Pop</label>
+                <input type="checkbox" id="flamenco" name="genero" value="flamenco">
+                <label for="flamenco">Flamenco</label>
+                <input type="checkbox" id="rap" name="genero" value="rap">
+                <label for="rap">Rap</label>
+                <div id="mensajeErrorSeleccion"></div>
+            </fieldset>
+            <br>
+            <label for="localizacion">Localización: </label>
+            <input type="text" id="localizacion" name="localizacion">
+            <div id="mensajeErrorLocalizacion"></div>
+            <br>
+            <label for="prestado">Prestado:</label>
+            <input type="radio" id="si" name="boleano" value="Sí">
+            <label for="si">SI</label>
+            <input type="radio" id="no" name="boleano" value="No">
+            <label for="no">NO</label>
+            <br><br>
+            <input type="button" id="guardar" value="Guardar">
+            <input type="button" id="mostrar" value="Mostrar">
+            <br><br>
+        </fieldset>
+    </form>
+    <div id="zonaErrores">
+
+    </div>
+
+    <form name="formularioSecundario">
+        <fieldset>
+            <input type="text" id="textoBuscar" placeholder="Búscar🔎">
+            <input type="button" id="buscar" value="Buscar">
+            <input type="button" id="limpiar" value="Limpiar">
+        </fieldset>
+    </form>
+
+    <div id="zonaMostrar"></div>
+    
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
