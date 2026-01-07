@@ -71,6 +71,7 @@ section h2 {
 }
 
 .project-card a {
+    border: 2;
     text-decoration: none;
     color: #1e1e1e;
     font-weight: bold;
