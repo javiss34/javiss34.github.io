@@ -71,6 +71,7 @@ window.onload = () => {
           const p = document.createElement("p");
           p.textContent = error;
           zonaErrores.appendChild(p);
+          zonaErrores.classList.add("error");
         });
       } else {
         const nuevoDisco = {
@@ -87,17 +88,24 @@ window.onload = () => {
         discos = [...discos, nuevoDisco];
         localStorage.setItem("discos", JSON.stringify(discos));
         formulario.reset();
+        zonaMostrar.innerHTML = "";
       }
     }
 
     //Mostrar
     if (e.target.id === "mostrar") {
-      zonaMostrar.innerHTML = pintarDiscos(discos);
-      zonaMostrar.classList.add("mostrar");
+      if(discos.length){
+        zonaMostrar.innerHTML = pintarDiscos(discos);
+        zonaMostrar.classList.add("mostrar");
+      }else{
+        zonaMostrar.innerHTML = "No hay discos";
+        zonaMostrar.classList.add("mostrar");
+
+      }
     }
   });
 
-  //Delegación de evntos para el formulario secundario
+  //Delegación de eventos para el formulario secundario
   formularioSecundario.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -105,7 +113,13 @@ window.onload = () => {
       const filtrados = discos.filter((d) =>
         d.nombre.toLowerCase().includes(textoBuscar.value.toLowerCase())
       );
-      zonaMostrar.innerHTML = pintarDiscos(filtrados);
+      if(filtrados.length>0){
+        zonaMostrar.innerHTML = pintarDiscos(filtrados);
+        zonaMostrar.classList.add("mostrar");
+      }else{
+        zonaMostrar.innerHTML = "No se puede encontrar el disco buscado";
+        zonaMostrar.classList.add("mostrar");
+      }
     }
     if (e.target.id === "limpiar") {
     zonaMostrar.innerHTML = pintarDiscos(discos);
